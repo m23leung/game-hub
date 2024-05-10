@@ -19,6 +19,7 @@ interface Props {
 const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
   const { data, isLoading, error } = useGenres();
 
+  // TODO: Remove these lines since we aren't fetching genres from server anymore
   if (error) return null;
   if (isLoading) return <Spinner />;
 
